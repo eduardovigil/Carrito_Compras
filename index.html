@@ -4,6 +4,7 @@
     <head>
         <link href="dist/css/bootstrap.min.css" rel="stylesheet"/>
         <script src="dist/js/bootstrap.bundle.min.js"></script>
+        <script src="dist/js/articulos.js"></script>
         <link href="dist/css/style.css" rel="stylesheet"/>
         <!-- our project just needs Font Awesome Solid + Brands -->
         <link href="assests/css/fontawesome.css" rel="stylesheet" />
@@ -12,6 +13,26 @@
         <title>
             LIBRERIA LA NUEVA
         </title>
+        
+        <script>   
+        /* encargada de almacenar datos en el localstorage*/
+                
+            if(localStorage.getItem('cartEsc')!== undefined && localStorage.getItem('cartEsc')){
+
+            }else{
+              localStorage.setItem('cartEsc', JSON.stringify(articulosEsc));
+            }
+            
+            if(localStorage.getItem('cartArt')!== undefined && localStorage.getItem('cartArt')){
+            }else{
+              localStorage.setItem('cartArt', JSON.stringify(articulosArt));
+            }
+
+            if(localStorage.getItem('cartOfc')!== undefined && localStorage.getItem('cartOfc')){
+            }else{
+              localStorage.setItem('cartOfc', JSON.stringify(articulosOficina));
+            }            
+        </script>
     </head>
     <body>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -36,16 +57,15 @@
                 </ul>
                 </li>
             </ul>
-            <form class="d-flex">
-                <a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-cart-shopping"></i></a>
-            </form>
+            <!--<form class="d-flex">
+                <a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class="fa-solid fa-cart-shopping" onclick="imprimirCarrito();"></i><span id="carritoIcon" class="badge bg-secondary"></span></a>
+            </form>-->
             </div>
         </div>
       </nav>
 
         <div class="container">
             <br></br>
-
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -88,13 +108,13 @@
 
             <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
                 <div class="col">
-                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/escolar.html">ESCOLAR</a></div>
+                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/escolar.html"><i class="fa-solid fa-book"></i> ESCOLAR</a></div>
                 </div>
                 <div class="col">
-                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/escolar.html">ARTE</a></div>
+                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/arte.html"><i class="fa-solid fa-brush"></i> ARTE</a></div>
                 </div>
                 <div class="col">
-                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/escolar.html">OFICINA</a></div>
+                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/oficina.html"><i class="fa-solid fa-briefcase"></i> OFICINA</a></div>
                 </div>
                 
                 </div>
@@ -108,7 +128,8 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  ...
+                  <div class="list-group" id="carritoList">
+                  </div>                  
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -117,5 +138,6 @@
               </div>
             </div>
           </div>
+          <script src="dist/js/funciones.js"></script>
     </body>
 </html>

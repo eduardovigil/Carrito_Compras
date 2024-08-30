@@ -37,66 +37,37 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-cart-shopping" onclick="imprimirCarrito();"></i><span id="carritoIcon" class="badge bg-secondary"></span></a>
                 </form>
                 </div>
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container" id="catalogo">
             <br></br>
-            <div class="row row-cols-3 row-cols-lg-3 g-2 g-lg-3">
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../img/cuaderno2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Cuaderno cuadriculao 100 hojas.</h5>
-                          <p class="card-text">$1.50.</p>
-                          <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i> Añadir al Carrito</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../img/lapicero2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">L&aacute;piceros punta fina 3 unidades.</h5>
-                          <p class="card-text">$1.80</p>
-                          <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i>Añadir al Crrito</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../img/cuaderno3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Cuaderno rayado 100 hojas</h5>
-                          <p class="card-text">$1.65.</p>
-                          <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i> Añadir al Carrito</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../img/cuaderno1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Cuaderno doble rayado 150 hojas.</h5>
-                          <p class="card-text">$1.90.</p>
-                          <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i> Añadir al Carrito</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col col-3">
-                    <div class="card">
-                        <img src="../img/lapicero.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Set de l&aacute;piceros Pilot</h5>
-                          <p class="card-text">$1.85.</p>
-                          <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i> Añadir al Carrito</a>
-                        </div>
-                      </div>
-                </div>
+            <div class="row row-cols-3 row-cols-lg-3 g-2 g-lg-3" id="main"></div>
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <i class="fa-solid fa-cart-shopping rounded me-2"></i>
+                <strong class="me-auto">Mensaje</strong>
+                <small>Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Se añadió al carrito correctamente
+              </div>
             </div>
+            <div class="toast toasterror" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <i class="fa-solid fa-exclamation rounded me-2"></i>
+                <strong class="me-auto">Mensaje</strong>
+                <small>Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Articulo ya se encuentra añadido
+              </div>
+            </div>                         
         </div>
           <!-- Modal -->
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -106,15 +77,22 @@
                   <h5 class="modal-title" id="staticBackdropLabel">Carrito de Compra</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                  ...
+                <div class="modal-body" id="carritoList">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Understood</button>
+                  <button type="button" class="btn btn-primary" onclick="facturaPDF()">Realizar Pago</button>
                 </div>
               </div>
             </div>
           </div>
+          <script src="../js/funciones.js"></script>
+          <script src="../js/jspdf.debug.js"></script>
+          <script src="../js/jspdf.plugin.autotable.js"></script>
+          <script src="../js/factura.js"></script>
+          <script>
+            const articulos = JSON.parse(localStorage.getItem('cartOfc')) || [];
+            imprimirCatalogo(articulos);
+        </script>          
     </body>
 </html>
