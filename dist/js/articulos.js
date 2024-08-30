@@ -1,5 +1,3 @@
-
-/* objeto que contiene la informacion de los articulos*/
 const articulosEsc = [
     {
         IdArticulo: "AE001",
@@ -40,76 +38,16 @@ const articulosEsc = [
         urlImage:"../img/cuaderno2.jpg",
         Stock:10,
         Precio:0.50
-    },
-    {
-        IdArticulo: "AE005",
-        Categoria: "Escolar",
-        NombreArt:"Plumones",
-        MarcaArt:"Facela",
-        Info: "Plumones facela",
-        urlImage:"../img/plumones.jpg",
-        Stock:10,
-        Precio:0.50
-    },
-    {
-        IdArticulo: "AE006",
-        Categoria: "Escolar",
-        NombreArt:"Sacapunta",
-        MarcaArt:"Bic",
-        Info: "Sacapunta metalica",
-        urlImage:"../img/sacapunta.jpg",
-        Stock:10,
-        Precio:0.50
-    },
-    {
-        IdArticulo: "AE007",
-        Categoria: "Escolar",
-        NombreArt:"lapiz",
-        MarcaArt:"Facela",
-        Info: "Lapiz facela",
-        urlImage:"../img/lapiz.png",
-        Stock:10,
-        Precio:0.50
-    },
-    {
-        IdArticulo: "AE008",
-        Categoria: "Escolar",
-        NombreArt:"Agenda",
-        MarcaArt:"",
-        Info: "Agenda escolar",
-        urlImage:"../img/agenda.jfif",
-        Stock:10,
-        Precio:0.50
-    },
-    {
-        IdArticulo: "AE009",
-        Categoria: "Escolar",
-        NombreArt:"Diccionario",
-        MarcaArt:"",
-        Info: "Diccionario español",
-        urlImage:"../img/diccionario.jpg",
-        Stock:10,
-        Precio:0.50
-    },
-    {
-        IdArticulo: "AE010",
-        Categoria: "Escolar",
-        NombreArt:"Pluma",
-        MarcaArt:"Satabilo",
-        Info: "Pluma Negra punta fiina",
-        urlImage:"../img/pluma.jpg",
-        Stock:10,
-        Precio:0.50
     }
 ];
 const articulosArt = [
     {
         IdArticulo: "AA001",
         Categoria: "Arte",
-        NombreArt:"Pincel",
+        NombreArt:"Picel",
         MarcaArt:"Generico",
         Info: "Pincel para acuarela",
-        urlImage:"../img/pincel.png",
+        urlImage:"../img/cuaderno1.jpg",
         Stock:100,
         Precio:1
     },
@@ -119,7 +57,7 @@ const articulosArt = [
         NombreArt:"Acuarela",
         MarcaArt:"Facela",
         Info: "Acuarela base de Agua color negro",
-        urlImage:"../img/acuarela.jfif",
+        urlImage:"../img/cuaderno1.jpg",
         Stock:99,
         Precio:2.50
     },
@@ -129,9 +67,19 @@ const articulosArt = [
         NombreArt:"Lienzo",
         MarcaArt:"Generico",
         Info: "Lienzo 1 x 1 color blanco hueso",
-        urlImage:"../img/lienzo.jfif",
+        urlImage:"../img/cuaderno1.jpg",
         Stock:10,
         Precio:5
+    },
+    {
+        IdArticulo: "AA004",
+        Categoria: "Arte",
+        NombreArt:"Acuarela",
+        MarcaArt:"Facela",
+        Info: "Acuarela base de agua color azul",
+        urlImage:"../img/cuaderno2.jpg",
+        Stock:77,
+        Precio:3
     }
 ];
 const articulosOficina = [
@@ -141,7 +89,7 @@ const articulosOficina = [
         NombreArt:"Perforador",
         MarcaArt:"Facela",
         Info: "Perforador color negro",
-        urlImage:"../img/perforador.jpg",
+        urlImage:"../img/cuaderno1.jpg",
         Stock:10,
         Precio:6.75
     },
@@ -151,7 +99,7 @@ const articulosOficina = [
         NombreArt:"Basurero",
         MarcaArt:"Generico",
         Info: "Basurero para escritorio",
-        urlImage:"../img/basurero.webp",
+        urlImage:"../img/cuaderno1.jpg",
         Stock:99,
         Precio:3.25
     },
@@ -161,7 +109,7 @@ const articulosOficina = [
         NombreArt:"Sacapunta de Escritorio",
         MarcaArt:"Facela",
         Info: "Sacapunta color verde para escritorio",
-        urlImage:"../img/sacapuntaEsc.jpg",
+        urlImage:"../img/cuaderno1.jpg",
         Stock:10,
         Precio:450
     },
@@ -171,7 +119,7 @@ const articulosOficina = [
         NombreArt:"Engrapadora",
         MarcaArt:"Facela",
         Info: "Engrapadora tamaño estandar color negro",
-        urlImage:"../img/engrapadora.jfif",
+        urlImage:"../img/cuaderno2.jpg",
         Stock:10,
         Precio:450
     }

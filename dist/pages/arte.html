@@ -91,12 +91,18 @@
           </div>
 
           <script src="../js/funciones.js"></script>
-          <script src="../js/jspdf.debug.js"></script>
-          <script src="../js/jspdf.plugin.autotable.js"></script>
-          <script src="../js/factura.js"></script>
           <script>
             const articulos = JSON.parse(localStorage.getItem('cartArt')) || [];
             imprimirCatalogo(articulos);
+            imprimirCarrito();
+
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+              return new bootstrap.Popover(popoverTriggerEl)
+            });
+            var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+              trigger: 'focus'
+            })
         </script>          
     </body>
 </html>
