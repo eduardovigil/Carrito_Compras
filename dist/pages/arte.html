@@ -89,8 +89,10 @@
               </div>
             </div>
           </div>
-
           <script src="../js/funciones.js"></script>
+          <script src="../js/jspdf.debug.js"></script>
+          <script src="../js/jspdf.plugin.autotable.js"></script>
+          <script src="../js/factura.js"></script>
           <script>
             const articulos = JSON.parse(localStorage.getItem('cartArt')) || [];
             imprimirCatalogo(articulos);

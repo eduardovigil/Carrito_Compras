@@ -1,7 +1,23 @@
+/*crea tabla de articulos, en la cual recibe como parametro, llamado articulos
+el cual es un objeto que contiene informacion de los articulos, esta funcion
+se utiliza para todas las catergorias en el sitio*/
+
+
 function imprimirCatalogo(articulos){
   // Obtiene el elemento principal donde se añadirá el catálogo
   var main = document.getElementById("main");
-  
+  /* se recorre el objeto para imprimir todos los articulos en existencia */
+    /*la estructura que se utiliza para las tarjeta de articulos es: 
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    */
   // Recorre la lista de artículos para crear el catálogo
   for (let i = 0; i < articulos.length; i++) {
       // Crea un contenedor para cada artículo
@@ -68,7 +84,7 @@ function imprimirCatalogo(articulos){
       
       pCarrito.appendChild(carritoText);
       pCarrito.appendChild(carrito);
-      
+      /* se incorporan todos los elementos con la funcion appendchild */
       // Añade todos los elementos al cuerpo de la tarjeta
       cardT.appendChild(h5Text);
       cardT.appendChild(buttonInfo);
