@@ -121,6 +121,6 @@ const articulosOficina = [
         Info: "Engrapadora tamaño estandar color negro",
         urlImage:"../img/cuaderno2.jpg",
         Stock:10,
-        Precio:450
+        Precio:4.50
     }
 ]; 
