@@ -111,7 +111,7 @@ const articulosOficina = [
         Info: "Sacapunta color verde para escritorio",
         urlImage:"../img/cuaderno1.jpg",
         Stock:10,
-        Precio:450
+        Precio:4
     },
     {
         IdArticulo: "AO004",
