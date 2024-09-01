@@ -1,5 +1,9 @@
 function facturaPDF(){
     const listItem = JSON.parse(localStorage.getItem('cartItem')) || [];
+                       // Vaciar el carrito después de generar la factura
+    localStorage.removeItem('cartItem');
+    console.log("El carrito ha sido vaciado.");
+
             var newCart = [];
             var Total = 0;
             for (let i = 0; i < listItem.length; i++) {
@@ -36,9 +40,10 @@ function facturaPDF(){
                         "col4": listItem[i].cantItem * result.Precio
                     }
                     newCart.push(item);
-                }
-                
+                }      
+                 
             }
+
             const doc = new jsPDF({
             orientation: "p", //set orientation
             unit: "pt", //set unit for document
@@ -90,5 +95,6 @@ function facturaPDF(){
             doc.text(20, 50, 'Total a Pagar: $'+Total);
             doc.text(450, 50, 'N° Factura ' + numAle);
             doc.save('factura-' + numAle + '.pdf');
-
-}
+alert ('gracas por su compra');
+window.location.reload();
+}            
