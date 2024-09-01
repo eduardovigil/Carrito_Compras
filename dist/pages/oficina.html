@@ -1,106 +1,134 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <link href="../css/bootstrap.min.css" rel="stylesheet"/>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <link href="../css/style.css" rel="stylesheet"/>
-        <!-- our project just needs Font Awesome Solid + Brands -->
-        <link href="../../assests/css/fontawesome.css" rel="stylesheet" />
-        <link href="../../assests/css/brands.css" rel="stylesheet" />
-        <link href="../../assests/css/solid.css" rel="stylesheet" />
-        <title>
-            LIBRERIA LA NUEVA
-        </title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.html"><i class="fa-solid fa-book-bookmark"></i> La Nueva</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link" href="quienes_Somos.html">Quienes Somos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorías
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="escolar.html">Escolar</a></li>
-                        <li><a class="dropdown-item" href="arte.html">Arte</a></li>
-                        <li><a class="dropdown-item" href="oficina.html">Oficina</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-cart-shopping" onclick="imprimirCarrito();"></i><span id="carritoIcon" class="badge bg-secondary"></span></a>
-                </form>
-                </div>
-            </div>
-        </nav>
+<head>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- our project just needs Font Awesome Solid + Brands -->
+  <link href="../../assests/css/fontawesome.css" rel="stylesheet" />
+  <link href="../../assests/css/brands.css" rel="stylesheet" />
+  <link href="../../assests/css/solid.css" rel="stylesheet" />
+  <title>
+    LIBRERIA LA NUEVA
+  </title>
+</head>
 
-        <div class="container" id="catalogo">
-            <br></br>
-            <div class="row row-cols-3 row-cols-lg-3 g-2 g-lg-3" id="main"></div>
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
-                <i class="fa-solid fa-cart-shopping rounded me-2"></i>
-                <strong class="me-auto">Mensaje</strong>
-                <small>Ahora</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-              </div>
-              <div class="toast-body">
-                Se añadió al carrito correctamente
-              </div>
-            </div>
-            <div class="toast toasterror" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
-                <i class="fa-solid fa-exclamation rounded me-2"></i>
-                <strong class="me-auto">Mensaje</strong>
-                <small>Ahora</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-              </div>
-              <div class="toast-body">
-                Articulo ya se encuentra añadido
-              </div>
-            </div>                         
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <img src="../img/logo.jpeg" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link" style="color: white;" href="../../index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="escolar.html">Escolar</a></li>
+              <li><a class="dropdown-item" href="arte.html">Arte</a></li>
+              <li><a class="dropdown-item" href="oficina.html">Oficina</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link" style="color: white;" href="quienes_Somos.html">Quienes Somos</a>
+          </li>
+        </ul>
+        <form style="position: relative; padding-left: 70%;" class="d-flex">
+          <a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <i class="fa-solid fa-cart-shopping" onclick="imprimirCarrito();"></i>
+            <span id="carritoIcon" class="badge bg-secondary"></span>
+          </a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" id="catalogo">
+    <br></br>
+    <div class="row row-cols-3 row-cols-lg-3 g-2 g-lg-3" id="main"></div>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <i class="fa-solid fa-cart-shopping rounded me-2"></i>
+        <strong class="me-auto">Mensaje</strong>
+        <small>Ahora</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Se añadió al carrito correctamente
+      </div>
+    </div>
+    <div class="toast toasterror" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <i class="fa-solid fa-exclamation rounded me-2"></i>
+        <strong class="me-auto">Mensaje</strong>
+        <small>Ahora</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Articulo ya se encuentra añadido
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Carrito de Compra</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-          <!-- Modal -->
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Carrito de Compra</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="carritoList">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" onclick="facturaPDF()">Realizar Pago</button>
-                </div>
-              </div>
-            </div>
+        <div class="modal-body" id="carritoList">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="facturaPDF()">Realizar Pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/funciones.js"></script>
+  <script src="../js/jspdf.debug.js"></script>
+  <script src="../js/jspdf.plugin.autotale.js"></script>
+  <script src="../js/factura.js"></script>
+  <script>
+    const articulos = JSON.parse(localStorage.getItem('cartOfc')) || [];
+    imprimirCatalogo(articulos);
+    imprimirCarrito();
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    });
+    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+      trigger: 'focus'
+    })
+  </script>
+  <br>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
-          <script src="../js/funciones.js"></script>
-          <script src="../js/jspdf.debug.js"></script>
-          <script src="../js/jspdf.plugin.autotale.js"></script>
-          <script src="../js/factura.js"></script>
-          <script>
-            const articulos = JSON.parse(localStorage.getItem('cartOfc')) || [];
-            imprimirCatalogo(articulos);
-            imprimirCarrito();
-            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-              return new bootstrap.Popover(popoverTriggerEl)
-            });
-            var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-              trigger: 'focus'
-            })
-        </script>          
-    </body>
+          <p>&copy; 2024 Libreria La Nueva. Todos los derechos reservados.</p>
+          <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
