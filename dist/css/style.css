@@ -3,8 +3,8 @@
 }
 
 body{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,61,0.6223739495798319) 77%, rgba(0,212,255,1) 100%);
+    color: #333;
+    
 }
 
 .imageItem{
@@ -13,6 +13,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: #333;
 }
 
 
@@ -45,3 +46,98 @@ a{
     list-style: disc;
     margin-left: 20px;
 }
+
+/*Modificaciones del menu*/
+nav.navbar {
+    background-color: #343a40;
+  }
+
+  nav.navbar img {
+    height: 100px; 
+    width: auto; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+  }
+
+  /*Modificaciones a las categorias abajo*/
+  .category-block {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  .category-block:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  .category-block img {
+    position: relative;
+    width: 350px;
+    max-height: 200px;
+    object-fit: cover; 
+    object-position: center; 
+        border-radius: 10px;
+  }
+  .category-block h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .category-block p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  .category-block a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .category-block a:hover {
+    background-color: #0056b3;
+  }
+
+  .promo{
+    text-align: center;
+    margin: 20px;
+  }
+
+  /*Estilos footer*/
+  .footer {
+    position: relative;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  .footer a:hover {
+    color: #00bcd4;
+  }
+  .footer .social-icons {
+    margin-bottom: 20px;
+  }
+  .footer .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    color: #ffffff;
+  }
+  .footer .social-icons a:hover {
+    color: #00bcd4;
+  }
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+  }

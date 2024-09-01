@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <link href="dist/css/bootstrap.min.css" rel="stylesheet"/>
         <script src="dist/js/bootstrap.bundle.min.js"></script>
@@ -32,26 +31,29 @@
         </script>
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-book-bookmark"></i> La Nueva</a>
+          <img src="dist/img/logo.jpeg" alt="">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link" href="dist/pages/quienes_Somos.html">Quienes Somos</a>
-                </li>
+            <ul class="navbar-nav">
+              <li>
+                <a class="nav-link"  style="color: white;" href="index.html">Inicio</a>
+              </li>
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Categorías
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="dist/pages/escolar.html">Escolar</a></li>
-                    <li><a class="dropdown-item" href="dist/pages/arte.html">Arte</a></li>
-                    <li><a class="dropdown-item" href="dist/pages/oficina.html">Oficina</a></li>
+                <ul  class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a  class="dropdown-item" href="dist/pages/escolar.html">Escolar</a></li>
+                    <li><a  class="dropdown-item" href="dist/pages/arte.html">Arte</a></li>
+                    <li><a  class="dropdown-item" href="dist/pages/oficina.html">Oficina</a></li>
                 </ul>
+                </li>
+                <li>
+                  <a class="nav-link"  style="color: white;" href="dist/pages/quienes_Somos.html">Quienes Somos</a>
                 </li>
             </ul>
             <!--<form class="d-flex">
@@ -60,9 +62,6 @@
             </div>
         </div>
       </nav>
-
-        <div class="container">
-            <br></br>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -101,21 +100,43 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-                
 
-            <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
-                <div class="col">
-                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/escolar.html"><i class="fa-solid fa-book"></i> ESCOLAR</a></div>
+              <div class="container">
+                <h1 class="promo">Todo lo que buscas, en un solo lugar</h1>
+                <div class="row">
+                  <!-- Bloque 1 -->
+                  <div class="col-md-4">
+                    <div class="category-block">
+                      <img src="dist/img/cuaderno1.jpg" alt="Categoría 1">
+                      <h3>ESCOLAR</h3>
+                      <p>Todos los materiales escolares, en un solo lugar.</p>
+                      <a href="dist/pages/escolar.html" class="btn">Ir</a>
+                    </div>
+                  </div>
+            
+                  <!-- Bloque 2 -->
+                  <div class="col-md-4">
+                    <div class="category-block">
+                      <img src="dist/img/libros.jpg" alt="Categoría 2">
+                      <h3>ARTE</h3>
+                      <p>Obras literarias, cuentos de ficción y más...</p>
+                      <a href="dist/pages/arte.html" class="btn">Ir</a>
+                    </div>
+                  </div>
+            
+                  <!-- Bloque 3 -->
+                  <div class="col-md-4">
+                    <div class="category-block">
+                      <img src="dist/img/perforador.jpg" alt="Categoría 3">
+                      <h3>OFICINA</h3>
+                      <p>Equipa tu oficina con nosotros.</p>
+                      <a href="dist/pages/oficina.html" class="btn">Ir</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col">
-                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/arte.html"><i class="fa-solid fa-brush"></i> ARTE</a></div>
-                </div>
-                <div class="col">
-                    <div class="p-3 border bg-light txtCenter"><a href="dist/pages/oficina.html"><i class="fa-solid fa-briefcase"></i> OFICINA</a></div>
-                </div>
-                
-                </div>
-          </div>
+              </div>  
+
+          
           <!-- Modal -->
           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -135,6 +156,22 @@
               </div>
             </div>
           </div>
+          <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                  <p>&copy; 2024 Libreria La Nueva. Todos los derechos reservados.</p>
+                  <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+                </div>
+              </div>
+            </div>
+          </footer>
           <script src="dist/js/funciones.js"></script>
     </body>
 </html>
