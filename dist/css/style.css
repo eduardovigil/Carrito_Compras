@@ -14,3 +14,34 @@ body{
 a{
     text-decoration: none;
 }
+
+
+
+.card-body p {
+    text-align: justify; /* Justifica el texto para un aspecto más profesional */
+    line-height: 1.5; /* Ajusta el espacio entre líneas para una mejor legibilidad */
+}
+
+.text-center {
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+
+/* Estilos CSS (ejemplo) */
+.card-body h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-body h3 {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-body ul {
+    list-style: disc;
+    margin-left: 20px;
+}
